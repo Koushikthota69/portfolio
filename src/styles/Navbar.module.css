@@ -1,0 +1,90 @@
+/* Navbar.module.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* Default nav list (desktop) */
+.navList {
+  display: flex;
+  gap: 2rem;
+}
+
+.navList li {
+  list-style: none;
+  position: relative;
+}
+
+.navList li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navList li a:hover {
+  color: #ff9800;
+}
+
+.navList li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #ff9800;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
+}
+
+.navList li a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger menu (hidden on desktop) */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  user-select: none;
+  color: white;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navList {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
+    display: none; /* Hidden by default */
+    text-align: center;
+  }
+
+  .navList.showMenu {
+    display: flex; /* Show when toggled */
+  }
+
+  .hamburger {
+    display: block; /* Show hamburger on mobile */
+  }
+}

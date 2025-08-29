@@ -1,0 +1,175 @@
+.main {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(270deg, #667eea, #764ba2, #06beb6, #48b1bf);
+  background-size: 800% 800%;
+  animation: gradientBG 18s ease infinite;
+  color: white;
+  padding: 50px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+/* Background animation */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.heroContent {
+  max-width: 700px;
+}
+
+/* Profile image */
+.profilePic {
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+  margin-bottom: 25px;
+  width: 220px;   /* increased size */
+  height: 220px;  /* increased size */
+  object-fit: cover;
+}
+
+.fadeIn {
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  color: #f1f1f1;
+}
+
+/* Skills badges */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 35px;
+}
+
+.skills span {
+  background-color: rgba(255,255,255,0.2);
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.skills span:hover {
+  background-color: #ff9800;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Buttons */
+.buttons a {
+  display: inline-block;
+  margin: 5px 10px;
+  padding: 14px 30px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.button {
+  background-color: #ff9800;
+  color: white;
+}
+
+.button:hover {
+  background-color: #e68a00;
+}
+
+.buttonOutline {
+  border: 2px solid white;
+  color: white;
+}
+
+.buttonOutline:hover {
+  background-color: white;
+  color: #764ba2;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add circular skill bar styles (optional for home page) */
+.circularSkill {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+}
+
+.progressCircle {
+  width: 150px;
+  height: 150px;
+  transform: rotate(-90deg);
+}
+
+.bg {
+  fill: none;
+  stroke: rgba(255,255,255,0.2);
+  stroke-width: 3.8;
+}
+
+.progress {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  stroke-dasharray: 0 100;
+  stroke-dashoffset: 0;
+  transition: stroke-dasharray 2s ease;
+}
+
+.percentage {
+  fill: #fff;
+  font-size: 0.7rem;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  transform: rotate(90deg);
+  font-weight: bold;
+}
+
+.skillName {
+  font-weight: 600;
+  margin-top: 10px;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
